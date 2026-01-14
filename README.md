@@ -1,59 +1,135 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Work-OS — The Ultimate Agency Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Work-OS Banner](https://via.placeholder.com/1200x400.png?text=Work-OS+Premium+SaaS)
 
-## About Laravel
+**Work-OS** is a premium, white-label ready Agency Management System built with **Laravel 11**, **Livewire 3**, and **Tailwind CSS**. Designed for modern agencies to manage projects, track finances, and invoice clients in one unified dashboard.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🔥 Key Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 🚀 Project Management
+- **Kanban Board:** Drag & drop interface to manage project status (Pending, In Progress, Completed).
+- **Task Tracking:** Granular task management within projects.
+- **Client Association:** Link projects to specific clients for better organization.
 
-## Learning Laravel
+### 💰 Financial Suite (ERP-Lite)
+- **Professional Invoicing:** Generate PDF invoices with automatic status tracking (Draft, Sent, Paid, Overdue).
+- **One-Click Email:** Send invoices directly to clients via email.
+- **Expense Tracking:** Record operational costs with receipt upload support.
+- **Profit Analysis:** Real-time dashboard showing **Revenue vs. Expenses**, **Net Profit**, and **Profit Margin**.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 🎨 White-Label Ready
+- **Agency Branding:** Upload your own logo and company details in Settings.
+- **Dynamic PDF:** Invoices automatically use your uploaded logo and address.
+- **Custom Profile:** Personalized user profile and sidebar tagging.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### ⚡ Power User Features
+- **Command Palette (`CMD+K`):** Blazing fast navigation without touching the mouse.
+- **Activity Log:** Audit trail for every critical action (Project moves, Emails sent).
+- **Global Search:** Find projects instantly.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🛠️ Tech Stack
 
-### Premium Partners
+- **Framework:** Laravel 11.x
+- **Frontend:** Livewire 3 + Alpine.js
+- **Styling:** Tailwind CSS (Dark Mode First)
+- **Charts:** ApexCharts.js
+- **PDF Engine:** DomPDF
+- **Icons:** Heroicons
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## ⚙️ Server Requirements
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Ensure your server meets the following requirements:
 
-## Code of Conduct
+- PHP >= 8.2
+- BCMath PHP Extension
+- Ctype PHP Extension
+- JSON PHP Extension
+- Mbstring PHP Extension
+- OpenSSL PHP Extension
+- PDO PHP Extension
+- Tokenizer PHP Extension
+- XML PHP Extension
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 📦 Installation Guide
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Follow these steps to set up the project on your local machine:
 
-## License
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/yourusername/work-os.git](https://github.com/yourusername/work-os.git)
+cd work-os
+```
+### 2. Install Dependencies
+```bash
+composer install
+npm install
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 3. Environment Setup
+Copy the example environment file and configure your database:
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+Note: Make sure to create a database (e.g., work_os) in your MySQL/MariaDB and update the DB_DATABASE in your .env file.
+
+### 4. Database Setup & Seeding
+This command will create tables and populate them with Premium Dummy Data:
+```bash
+php artisan migrate:fresh --seed
+```
+
+### 5. Storage Link
+Link the storage folder to public to allow image uploads (Logos/Receipts):
+```bash
+php artisan storage:link
+```
+
+### 6. Run the App
+```bash
+npm run build
+php artisan serve
+```
+Visit ```http://localhost:8000``` in your browser.
+
+## 🔐 Default Login
+The application comes with a pre-configured **Super Admin** account generated by the seeder. Since this is a premium setup, registration is disabled by default to ensure security.
+
+Use these credentials to sign in:
+
+| Role | Email | Password |
+| :--- | :--- | :--- |
+| **Super Admin** | `architect@devscript.lab` | `password` |
+
+> **Security Note:** After logging in for the first time, please navigate to **Settings** and update your profile information and password immediately.
+
+### 🔄 Testing Password Reset Flow
+To verify the secure recovery system (SMTP):
+1. Navigate to the **Login Page**.
+2. Click on the **"Forgot Password?"** link.
+3. Enter the admin email: `architect@devscript.lab`.
+4. Check your **Mailtrap** inbox (or configured SMTP) to view the secure reset link.
+
+## 📧 Email Configuration (SMTP)
+To use the "Send Invoice via Email" feature, configure your SMTP settings in .env. For local testing, we recommend using Mailtrap:
+```bash
+MAIL_MAILER=smtp
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=your_username
+MAIL_PASSWORD=your_password
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS="hello@youragency.com"
+MAIL_FROM_NAME="${APP_NAME}"
+```
+
+## 📄 License
+This software is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT). 
