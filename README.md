@@ -62,7 +62,7 @@ Follow these steps to set up the project on your local machine:
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/yourusername/work-os.git](https://github.com/yourusername/work-os.git)
+git clone https://github.com/SandyAryadika/laravel-agency-premium.git
 cd work-os
 ```
 ### 2. Install Dependencies
