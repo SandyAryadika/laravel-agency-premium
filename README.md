@@ -1,7 +1,5 @@
 # Work-OS — The Ultimate Agency Management System
 
-![Work-OS Banner](https://via.placeholder.com/1200x400.png?text=Work-OS+Premium+SaaS)
-
 **Work-OS** is a premium, white-label ready Agency Management System built with **Laravel 11**, **Livewire 3**, and **Tailwind CSS**. Designed for modern agencies to manage projects, track finances, and invoice clients in one unified dashboard.
 
 ---
