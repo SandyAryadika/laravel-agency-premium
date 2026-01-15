@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ $title ?? 'Work-OS' }}</title>
+    <title>{{ $title ?? 'AgencyFlow' }}</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,9 +61,9 @@
                         </svg>
                     </div>
                     <div>
-                        <h1 class="text-xl font-bold text-white tracking-tight">Work<span
-                                class="text-blue-500">OS</span></h1>
-                        <p class="text-[10px] text-slate-500 uppercase tracking-widest font-semibold">Premium Setup</p>
+                        <h1 class="text-xl font-bold text-white tracking-tight">AgencyFlow
+                            <p class="text-[10px] text-slate-500 uppercase tracking-widest font-semibold">Premium Setup
+                            </p>
                     </div>
                 </div>
             </div>
